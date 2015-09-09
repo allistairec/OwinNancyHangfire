@@ -1,2 +1,2 @@
 # OwinNancyHangfire
-Self hosted NancyFx with Hangfire usgin Owin
+Self hosted NancyFx with Hangfire using Owin
