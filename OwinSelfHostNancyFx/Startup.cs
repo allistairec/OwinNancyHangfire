@@ -13,7 +13,7 @@ namespace OwinSelfHostNancyFx
         public void Configuration(IAppBuilder app)
         {
             GlobalConfiguration.Configuration
-            .UseSqlServerStorage(ConfigurationManager.ConnectionStrings["billingScheduler"].ConnectionString);
+            .UseSqlServerStorage(ConfigurationManager.ConnectionStrings["scheduler"].ConnectionString);
 
             app.UseHangfireDashboard("/hangfire");
             app.UseHangfireServer();
