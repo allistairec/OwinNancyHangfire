@@ -10,7 +10,6 @@ namespace OwinSelfHostNancyFx
 
         public void Start()
         {
-            // Nancy
             var url = "http://hangfire.owin.selfhosted.with.nancy/";
 
             using (WebApp.Start<Startup>(url))

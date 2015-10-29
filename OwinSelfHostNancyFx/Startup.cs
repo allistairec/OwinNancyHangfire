@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
+using Castle.Windsor;
 using Hangfire;
 using Microsoft.Owin;
+using Nancy.Owin;
 using Owin;
 using OwinSelfHostNancyFx;
 
@@ -18,8 +20,13 @@ namespace OwinSelfHostNancyFx
             app.UseHangfireDashboard("/hangfire");
             app.UseHangfireServer();
 
-            app.UseNancy();
-            //app.UseStageMarker(PipelineStage.MapHandler);
+            IWindsorContainer container = new WindsorContainer();
+            // Registrations here
+
+            app.UseNancy(new NancyOptions
+            {
+                Bootstrapper = new NancyWindsorBootstrapper(container)
+            });
         }
     }
 }
