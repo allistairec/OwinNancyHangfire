@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Nancy.Owin;
 using Owin;
 using OwinSelfHostNancyFx;
+using OwinSelfHostNancyFx.Installers.Windsor;
 
 [assembly: OwinStartup(typeof(Startup))]
 
@@ -20,8 +21,9 @@ namespace OwinSelfHostNancyFx
             app.UseHangfireDashboard("/hangfire");
             app.UseHangfireServer();
 
+            // Windsor wireup
             IWindsorContainer container = new WindsorContainer();
-            // Registrations here
+            container.Install(new RouteInstaller());
 
             app.UseNancy(new NancyOptions
             {

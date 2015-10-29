@@ -98,6 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\IRoute.cs" />
+    <Compile Include="Infrastructure\Routes.cs" />
+    <Compile Include="Installers\Windsor\RouteInstaller.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Modules\Index.cs" />
     <Compile Include="NancyWindsorBootstrapper.cs" />

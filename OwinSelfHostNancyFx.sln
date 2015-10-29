@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinSelfHostNancyFx", "OwinSelfHostNancyFx\OwinSelfHostNancyFx.csproj", "{76E41C0F-7768-4377-99E6-39A80A4D02B0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tests", ".tests", "{F674E2A2-678A-4110-A422-97DE68423C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinSelfHostNancyFx.Tests", "OwinSelfHostNancyFx.Tests\OwinSelfHostNancyFx.Tests.csproj", "{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{76E41C0F-7768-4377-99E6-39A80A4D02B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E41C0F-7768-4377-99E6-39A80A4D02B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E41C0F-7768-4377-99E6-39A80A4D02B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{432F95B0-8ECB-4A83-AA7B-F14B6BC486CE} = {F674E2A2-678A-4110-A422-97DE68423C42}
 	EndGlobalSection
 EndGlobal

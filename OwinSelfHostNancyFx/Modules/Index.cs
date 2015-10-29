@@ -1,15 +1,13 @@
 ﻿using Nancy;
+using OwinSelfHostNancyFx.Infrastructure;
 
 namespace OwinSelfHostNancyFx.Modules
 {
     public class Index : NancyModule
     {
-        public Index()
+        public Index(IRoute routeProvider)
         {
-            Get["/"] = _ =>
-            {
-                return Response.AsRedirect("/hangfire");
-            };
+            Get["/"] = _ => Response.AsRedirect(routeProvider.HangfireIndex);
         }
     }
 }
